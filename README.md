@@ -13,110 +13,105 @@
 
 Başka bir page’i çalıştırmak isterseniz, `emissions.csv` file’ını ilgili folder’a kopyalayın veya taşıyın.
 
+------------------------------------------------------------------------------------------------------------------------
 
-📊 Dashboard Hazırlama – CO₂ Emisyonları Analizi
-🎯 Proje Amacı
+📊 CO₂ Emissions Dashboard — Executive Summary
+🎯 Amaç (Why this dashboard exists)
 
-Bu projede amaç, küresel CO₂ emisyon verilerini kullanarak karar vericilere (özellikle CEO seviyesinde) hızlı ve anlaşılır içgörüler sunabilen bir dashboard çalışmasını incelemek ve çalıştırmaktır.
+Bu dashboard, ülke bazında CO₂ emisyonlarının zaman içindeki değişimini ve enerji kaynağı kırılımlarını görselleştirerek, üst yönetimin:
 
-Gerçek hayatta üst düzey yöneticiler:
+Uzun vadeli çevresel trendleri anlamasını
 
-Kodun nasıl yazıldığından çok
+Enerji dönüşümüyle ilgili stratejik kararlar almasını
 
-Ne sonuç çıktığıyla ilgilenir.
+Risk ve fırsat alanlarını hızlıca tespit etmesini
 
-Bu proje de tam olarak bu bakış açısıyla ele alınmıştır.
+amaçlar.
 
-🧠 İş Bağlamı (Business Context)
+Odak karar destek içgörüleridir.
 
-Bu dashboard aşağıdaki sorulara yanıt vermeyi hedefler:
+👥 Hedef Kitle
 
-Ülkelerin CO₂ emisyonları zaman içinde nasıl değişiyor?
+Bu dashboard özellikle aşağıdaki roller için tasarlanmıştır:
 
-Hangi ülkeler en büyük emisyon payına sahip?
+CEO → Stratejik yön ve uzun vadeli trendler
 
-Emisyon trendleri artış mı düşüş mü gösteriyor?
+CFO → Regülasyon, karbon maliyeti ve finansal riskler
 
-Sürdürülebilirlik ve çevresel riskler açısından hangi bölgeler kritik?
+Pazarlama / Kurumsal İletişim → Sürdürülebilirlik anlatısı ve itibar
 
-Bu tür analizler:
+📈 Dashboard Ne Gösteriyor?
+1️⃣ Zaman İçinde Toplam CO₂ Emisyonu
 
-Sürdürülebilirlik stratejileri
+1950’den günümüze kadar ülke bazlı toplam CO₂ trendi
 
-Yatırım kararları
+Uzun vadeli artış / azalış dönemleri net şekilde görülebiliyor
 
-Uzun vadeli risk yönetimi
+👉 Yönetici için anlamı:
 
-gibi konularda CEO ve üst yönetim için doğrudan girdiler üretir.
+“Emisyonlarımız yapısal olarak mı düşüyor, yoksa geçici bir dalgalanma mı?”
 
-📂 Kullanılan Veri Seti
+2️⃣ Enerji Kaynağına Göre Emisyon Kırılımı
 
-Kaynak: Our World in Data (OWID)
+Oil / Gas / Coal kaynaklı CO₂ emisyonları ayrı ayrı izlenebiliyor
 
-Dosya: emissions.csv
+Enerji karmasının zaman içinde nasıl değiştiği açıkça görülüyor
 
-İçerik:
+👉 Yönetici için anlamı:
 
-Ülke bazlı CO₂ emisyonları
+“Hangi enerji türü gerçek risk? Hangisi stratejik dönüşüm fırsatı?”
 
-Yıllara göre emisyon değişimleri
+3️⃣ Ülke Seçimi ile Dinamik Analiz
 
-Kişi başı ve toplam emisyon metrikleri
+Dropdown ile ülke değiştirildiğinde tüm grafikler senkron güncelleniyor
 
-Veri, dashboard çalıştırılmadan önce ilgili klasöre manuel olarak indirilmiştir.
+Aynı dashboard farklı ülkeler için tekrar tekrar kullanılabiliyor
 
-🖥️ Dashboard Çalışma Mantığı
+👉 Yönetici için anlamı:
 
-Dashboard, Dash (Plotly) kullanılarak geliştirilmiştir.
+“Tek bir araçla farklı pazarları karşılaştırabilirim.”
 
-Emisyon verisi doğrudan emissions.csv dosyasından okunur.
+🧠 Executive Insights (Karar Aldıran Çıkarımlar)
+🔹 İçgörü 1 — Emisyonlar her ülkede aynı hızda düşmüyor
 
-Grafikler ve metrikler gerçek zamanlı olarak bu veri setinden beslenir.
+Bazı ülkelerde toplam CO₂ emisyonu düşerken, bazı ülkelerde enerji türü değişmesine rağmen toplam emisyon yüksek kalıyor.
 
-Farklı dashboard sayfaları aynı veri setini kullanacak şekilde tasarlanmıştır.
+📌 CEO için karar:
 
-Bu projede en az bir dashboard page başarıyla çalıştırılmış ve doğrulanmıştır.
+Tek tip sürdürülebilirlik stratejisi yerine ülke bazlı farklı yol haritaları gerek.
 
-📈 Sunulan İçgörüler
+🔹 İçgörü 2 — Coal düşerken Oil/Gas baskısı devam edebiliyor
 
-Dashboard üzerinden elde edilebilecek temel içgörüler:
+Kömür kullanımı azalsa bile, petrol ve gaz kaynaklı emisyonlar bazı ülkelerde yapısal olarak yüksek kalıyor.
 
-Küresel CO₂ emisyonlarının zaman içindeki artış eğilimi
+📌 CFO için karar:
 
-Ülkeler arası emisyon farkları
+Karbon vergisi ve regülasyon riski yalnızca “kömür” odaklı düşünülmemeli.
 
-Yüksek emisyonlu ülkelerin küresel payı
+🔹 İçgörü 3 — Enerji dönüşümü ≠ Emisyonun otomatik düşmesi
 
-Uzun vadeli çevresel risk göstergeleri
+Enerji kaynağı değişimi tek başına yeterli değil; toplam tüketim artışı, kazanımı gölgeleyebiliyor.
 
-Bu içgörüler, teknik olmayan bir izleyiciye bile tek bakışta aktarılabilecek şekilde görselleştirilmiştir.
+📌 CEO & Strateji için karar:
 
-👤 Hedef Kitle
+Verimlilik ve talep yönetimi, enerji dönüşümünün ayrılmaz parçası olmalı.
 
-Bu çalışma özellikle şu profillere yöneliktir:
+🔹 İçgörü 4 — Bu dashboard bir “takip aracı” olarak konumlanmalı
 
-CEO
+Bu çalışma tek seferlik bir analiz değil, periyodik olarak izlenmesi gereken bir KPI ekranıdır.
 
-Yönetim Kurulu Üyeleri
+📌 Yönetim için karar:
 
-Yatırımcılar
+CO₂ trendleri, finansal KPI’lar gibi düzenli izlenmeli.
 
-Sürdürülebilirlik & Strateji ekipleri
+🛠️ Teknik Not:
+Dashboard Dash (Plotly) ile geliştirilmiştir
 
-Amaç, karar destekleyici görseller üretmektir.
+Veri kaynağı: Our World in Data – CO₂ Dataset
 
-✅ Proje Kapsamı ve Tamamlanma Durumu
+Amaç: kod sergilemek değil, içgörü üretmek
 
-Bu proje kapsamında:
+🚀 Sonuç
 
- Dashboard yapısı incelendi
-
- Gerekli veri seti doğru klasöre indirildi
-
- Dashboard başarıyla çalıştırıldı
-
- Grafiklerin veri setinden beslendiği doğrulandı
-
- İş bağlamına uygun yorumlama yapıldı
-
-📌 Bu proje, dashboard geliştirme sürecini anlamaya ve sonuç odaklı analiz sunmaya yöneliktir.
+Bu dashboard, teknik bir demo değil;
+stratejik karar aldırmayı hedefleyen bir yönetici aracıdı
